@@ -4,32 +4,33 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-    <!-- Disable zooming: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <title>demo</title>
-  <script type="module" crossorigin src="./assets/index-CWspoYC3.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BO60FcyF.css">
+    <title>Rust Chart</title>
+  <script type="module" crossorigin src="./assets/index-DP8eeAG3.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C-gYh6_8.css">
 </head>
 
 <body>
-<div class="wrapper">
-    <canvas id="canvas"></canvas>
-    <div class="overlay"></div>
+<header class="top-header">Rust Chart</header>
+<div class="app-shell">
+    <section class="chart-pane">
+        <canvas id="canvas"></canvas>
+    </section>
+    <section class="right-pane">
+        <div class="editor-pane">
+            <div class="editor-toolbar">
+                <button id="run-script-btn" class="run-btn" type="button" hidden="hidden">同步脚本变动到图表</button>
+                <label class="preset-wrap" for="script-preset-select">
+                    <select id="script-preset-select" class="preset-select">
+                    </select>
+                </label>
+            </div>
+            <div id="editor" class="editor-surface"></div>
+        </div>
+        <div id="log-output" class="log-pane"></div>
+    </section>
 </div>
-<script>
-    // The `--no-modules`-generated JS from `wasm-bindgen` attempts to use
-    // `WebAssembly.instantiateStreaming` to instantiate the wasm module,
-    // but this doesn't work with `file://` urls. This example is frequently
-    // viewed by simply opening `index.html` in a browser (with a `file://`
-    // url), so it would fail if we were to call this function!
-    //
-    // Work around this for now by deleting the function to ensure that the
-    // `no_modules.js` script doesn't have access to it. You won't need this
-    // hack when deploying over HTTP.
-    // delete WebAssembly.instantiateStreaming;
-</script>
-
 </body>
 
 </html>
