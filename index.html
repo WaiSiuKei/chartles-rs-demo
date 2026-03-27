@@ -7,12 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>Rust Chart</title>
-  <script type="module" crossorigin src="./assets/index-CqPKOZF2.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CRCBjww7.css">
+  <script type="module" crossorigin src="./assets/index-CUxBgPgq.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BlDmQrCe.css">
 </head>
 
 <body>
-<header class="top-header">Rust Chart</header>
+<header class="top-header">
+    <div class="header-title">Rust Chart</div>
+    <div class="header-actions">
+        <label class="tool-select-wrap" for="tool-select">
+            <select id="tool-select" class="tool-select" aria-label="Select drawing tool">
+            </select>
+        </label>
+        <button id="layout-btn" type="button" class="btn">Scripts</button>
+    </div>
+</header>
 <div class="app-shell">
     <section class="chart-pane">
         <canvas id="canvas"></canvas>
@@ -20,13 +29,14 @@
     <section class="right-pane">
         <div class="editor-pane">
             <div class="editor-toolbar">
+                <button id="close-script-btn" class="close-btn" type="button" aria-label="Close scripts panel">关闭</button>
                 <button id="run-script-btn" class="run-btn" type="button" hidden="hidden">同步脚本变动到图表</button>
                 <label class="preset-wrap" for="script-preset-select">
                     <select id="script-preset-select" class="preset-select">
                     </select>
                 </label>
             </div>
-            <div id="editor" class="editor-surface"></div>
+            <textarea id="editor" class="editor-surface" spellcheck="false" aria-label="Script editor"></textarea>
         </div>
         <div id="log-output" class="log-pane"></div>
     </section>
