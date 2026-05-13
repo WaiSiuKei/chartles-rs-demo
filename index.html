@@ -1,18 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
 
     <title></title>
-  <script type="module" crossorigin src="./assets/index-BKaUfbCq.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-MSeI-3vb.css">
-</head>
+    <style>
+      .loading-container {
+        background: var(--cl-background, white);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 150;
+      }
 
-<body>
-<div id="root"></div>
-</body>
+      .loading-spinner {
+        height: 56px;
+        width: 56px;
+        inset-inline-start: calc(50% - 32px);
+        top: calc(50% - 32px);
+        animation: loading-spin 0.9s linear infinite;
+        border-inline-end-color: var(--cl-button-hoverBackground);
+        border: 4px solid var(--cl-primary);
+        border-bottom-color: var(--cl-button-hoverBackground);
+        border-radius: 50%;
+        margin: 0 auto;
+        position: absolute;
+      }
 
+      @keyframes loading-spin {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-gCuWv1Rz.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CcWj60ot.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div class="loading-container" id="loading-container">
+      <div class="loading-spinner" role="progressbar"></div>
+    </div>
+  </body>
 </html>
